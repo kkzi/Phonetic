@@ -666,20 +666,4 @@ extension AdditionalSettingsViewController {
 
 extension AdditionalSettingsViewController {
     
-    @IBAction func tutorialButtonDidTap(_ sender: AnyObject) {
-        
-        if !UIDevice.isPad {
-            dismiss(animated: true) {
-                displayWalkthrough()
-            }
-            
-        } else {
-            dismiss(animated: true, completion: {
-                appDelegate.getVisibleViewController()?.dismiss(animated: true, completion: {
-                    displayWalkthrough()
-                })
-            })
-        }
-    }
-    
 }

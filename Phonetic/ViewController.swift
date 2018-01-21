@@ -72,8 +72,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        displayWalkthroughIfNeeded()
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,10 +108,7 @@ class ViewController: UIViewController {
         
         // setting button
         settingButton.addTarget(self, action: #selector(popoverSettingViewController), for: .touchUpInside)
-        
-        // info button
-        infoButton.addTarget(self, action: #selector(popoverInfoViewController), for: .touchUpInside)
-        
+      
         // Preventing multiple buttons from being touched at the same time
 //        settingButton.exclusiveTouch = true
 //        infoButton.exclusiveTouch = true
